@@ -1,0 +1,876 @@
+@import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);
+html,
+body {
+    font-family: "Jeju Gothic", "Roboto", "Helvetica", "Arial", sans-serif !important;
+    background-color: #FAFAFA;
+    color: #5e5e5e;
+}
+
+#orientationOverlay,
+#desktopOverlay,
+#registerOverlay,
+#loadingOverlay {
+    background-color: #000000;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 9997;
+}
+
+#orientationOverlay,
+#desktopOverlay {
+    z-index: 9999;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#registerOverlay {
+    background-color: #FFFFFF;
+    text-align: center;
+    display: block;
+    position: fixed;
+}
+
+#registerOverlay form {
+    width: 60%;
+    margin: 0 auto;
+}
+
+#loadingOverlay {
+    background-color: #FFFFFF;
+    text-align: center;
+    z-index: 9998;
+    opacity: 0;
+}
+
+#loadingOverlay img {
+    height: 20%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+.registerContainer {
+    color: #000000;
+    font-size: 1.5em;
+    width: 100%;
+    height: 300px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.registerContainer input,
+.registerContainer label {
+    font-family: 'Jeju Gothic';
+    text-align: center;
+}
+
+.registerContainer p {
+    margin: 0;
+}
+
+.registerContainer img {
+    width: 20%;
+    margin-bottom: 20px;
+}
+
+.registerContainer .submitBtn {
+    text-align: center;
+    margin-bottom: 10px;
+    width: 60%;
+    font-family: 'Jeju Gothic';
+}
+
+#desktopOverlay p {
+    font-size: 1.5em;
+    width: 100%;
+    height: 1.5em;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.wrongNum {
+    font-size: 0.8em;
+    color: red;
+}
+
+#orientationOverlay img {
+    height: 100%;
+    width: 100%;
+}
+
+.nav_overlay,
+.popup_overlay {
+    background-color: rgba(0, 0, 0, 0.75);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 0;
+}
+
+.ripplelink {
+    display: block;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.ink {
+    display: block;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 100%;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+}
+
+.animate {
+    -webkit-animation: ripple 0.65s linear;
+    -moz-animation: ripple 0.65s linear;
+    -ms-animation: ripple 0.65s linear;
+    -o-animation: ripple 0.65s linear;
+    animation: ripple 0.65s linear;
+}
+
+@-webkit-keyframes ripple {
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(2.5);
+    }
+}
+
+@-moz-keyframes ripple {
+    100% {
+        opacity: 0;
+        -moz-transform: scale(2.5);
+    }
+}
+
+@-o-keyframes ripple {
+    100% {
+        opacity: 0;
+        -o-transform: scale(2.5);
+    }
+}
+
+@keyframes ripple {
+    100% {
+        opacity: 0;
+        transform: scale(2.5);
+    }
+}
+
+.unselectable {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+
+/* CUSTOM OVERRIDE BOOTSTRAP */
+
+.topMargin {
+    margin-top: 70px;
+}
+
+.navbar-brand {
+    font-size: 16px;
+}
+
+.jumbotron {
+    margin-bottom: 14px;
+    min-height: 85px;
+}
+
+.jumbotron p {
+    font-size: 18px;
+    margin: auto;
+    position: absolute;
+    text-align: center;
+    height: 18px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.jumbotron h1 {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.jumbotronRMC1 {
+    background-color: #F5815A;
+    border-radius: 0px !important;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.jumbotronRMC2 {
+    background-color: #f5b260;
+    border-radius: 0px !important;
+    width: 48%;
+    color: #FFFFFF;
+    float: left;
+    min-height: 240px;
+    margin-right: 4%;
+    overflow: hidden;
+}
+
+.winner {
+    background-color: #f5b260;
+}
+
+.winner i {
+    font-size: 12rem;
+    opacity: 0.3;
+    right: 0;
+    position: absolute;
+    top: 0;
+}
+
+.jumbotronRMC2 i {
+    font-size: 20rem;
+    opacity: 0.3;
+    position: absolute;
+}
+
+.jumbotronRMC3,
+.jumbotronRMCspec1 {
+    background-color: #95d7e3;
+    border-radius: 0px !important;
+    width: 48%;
+    color: #FFFFFF;
+    min-height: 113px;
+    float: left;
+    overflow: hidden;
+}
+
+.jumbotronRMCspec1 {
+    margin-right: 4%;
+    background-color: #676767;
+}
+
+.jumbotronRMC3 i,
+.jumbotronRMCspec1 i {
+    font-size: 10rem;
+    opacity: 0.3;
+    position: absolute;
+    right: 0;
+}
+
+.jumbotronRMCspec1 i {
+    left: 0;
+}
+
+.jumbotronRMC4,
+.jumbotronRMCspec2 {
+    background-color: #676767;
+    border-radius: 0px !important;
+    width: 48%;
+    color: #FFFFFF;
+    min-height: 113px;
+    float: left;
+    overflow: hidden;
+}
+
+.jumbotronRMC4 i,
+.jumbotronRMCspec2 i {
+    font-size: 10rem;
+    opacity: 0.3;
+    position: absolute;
+    right: 0;
+}
+
+.jumbotronRMCspec2 i {
+    left: 20%;
+}
+
+.jumbotronRMCspec2 {
+    background-color: #f5b260;
+}
+
+.jumbotronRMC5 {
+    background-color: #F5815A;
+    border-radius: 0px !important;
+    color: #FFFFFF;
+    float: left;
+    width: 70%;
+    margin-right: 4%;
+    overflow: hidden;
+}
+
+.jumbotronRMC5 i {
+    font-size: 10rem;
+    opacity: 0.3;
+    position: absolute;
+    right: 50%;
+    top: 10%;
+}
+
+.jumbotronRMC6 {
+    background-color: #f5b260;
+    border-radius: 0px !important;
+    width: 26%;
+    color: #FFFFFF;
+    float: left;
+    text-align: center;
+    overflow: hidden;
+}
+
+.jumbotronRMC6 i {
+    font-size: 5rem;
+    opacity: 0.3;
+    position: absolute;
+}
+
+.jumbotronRMC7 {
+    background-color: #95d7e3;
+    border-radius: 0px !important;
+    width: 100%;
+    color: #FFFFFF;
+    float: left;
+    overflow: hidden;
+}
+
+.jumbotronRMC7 i {
+    font-size: 6rem;
+    opacity: 0.3;
+    position: absolute;
+}
+
+.jumbotronNotice {
+    background-color: #eee;
+    border-radius: 0px !important;
+    width: 100%;
+    color: #5e5e5e;
+    float: left;
+    overflow: hidden;
+}
+
+.jumbotronNotice i {
+    font-size: 6rem;
+    opacity: 0.3;
+    right: 0;
+    position: absolute;
+}
+
+.navbar-toggle {
+    padding: 5px 10px;
+}
+
+
+/* GROUP PAGE */
+
+.captain {
+    background-color: #95d7e3;
+    border-radius: 0px !important;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.captain img {
+    width: 20%;
+}
+
+.captain h1 {
+    margin-bottom: 10px;
+}
+
+.memberHeart,
+.questHeart {
+    background-color: #353535;
+    border-radius: 0px !important;
+    float: left;
+    width: 15%;
+    position: relative;
+    padding: 15px;
+    min-height: 50px;
+}
+
+.member,
+.member-f,
+.quest {
+    background-color: #95d7e3;
+    border-radius: 0px !important;
+    float: left;
+    width: 32.5%;
+    padding: 15px;
+    min-height: 50px;
+    text-align: center;
+}
+
+.member-f {
+    background-color: #F5815A;
+}
+
+.modd {
+    margin-right: 5%;
+}
+
+.memberHeart i {
+    width: 1em;
+    height: 1em;
+    color: #FFFFFF;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.otherGroup {
+    border-radius: 0px !important;
+    text-align: center;
+    float: left;
+    width: 100%;
+}
+
+.groups {
+    position: relative;
+    width: 43%;
+    height: 22%;
+    background-color: #353535;
+    margin: 0 0 5% 5%;
+    float: left;
+    overflow: hidden;
+}
+
+.specialgroup {
+    width: 90%;
+}
+
+.groups span {
+    font-size: 10rem;
+    color: #FFFFFF;
+    opacity: 0.5;
+    word-break: keep-all;
+    position: relative;
+    left: 5%;
+}
+
+.groups p {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 0;
+    text-align: center;
+    left: 0;
+    height: 1em;
+    text-decoration: none;
+    color: #5e5e5e;
+}
+
+.returnGroup {
+    border-radius: 0px !important;
+    text-align: center;
+    float: left;
+    width: 100%;
+}
+
+.returnGroup p {
+    text-decoration: none;
+    color: #5e5e5e;
+}
+
+
+/* popups */
+
+.diffGroupPopup {
+    width: 80%;
+    height: 65%;
+    display: none;
+    position: fixed;
+    margin: auto;
+    margin-bottom: auto;
+    padding: 5% 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    -webkit-box-shadow: 0px 0px 28px 2px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: 0px 0px 28px 2px rgba(0, 0, 0, 0.57);
+    box-shadow: 0px 0px 28px 2px rgba(0, 0, 0, 0.57);
+}
+
+.warningPopup {
+    width: 90%;
+    height: 108px;
+    display: none;
+    position: fixed;
+    margin: auto;
+    margin-bottom: auto;
+    padding: 5%;
+    top: 0;
+    text-align: center;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    -webkit-box-shadow: 0px 0px 28px 2px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: 0px 0px 28px 2px rgba(0, 0, 0, 0.57);
+    box-shadow: 0px 0px 28px 2px rgba(0, 0, 0, 0.57);
+}
+
+.warningPopup .btn-default {
+    background-image: none;
+}
+
+.heartPopup {
+    width: 90%;
+    height: 108px;
+    display: none;
+    position: fixed;
+    margin: auto;
+    margin-bottom: auto;
+    padding: 5%;
+    top: 0;
+    text-align: center;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    -webkit-box-shadow: 0px 0px 28px 2px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: 0px 0px 28px 2px rgba(0, 0, 0, 0.57);
+    box-shadow: 0px 0px 28px 2px rgba(0, 0, 0, 0.57);
+}
+
+.heartPopup .btn-default {
+    background-image: none;
+    margin: 0 5px;
+}
+
+
+/* Status */
+
+.navStatus {
+    margin-top: 14px;
+    text-align: center;
+}
+
+.navbar-toggle i {
+    vertical-align: sub;
+}
+
+
+/* HEARTBOARD */
+.heartboard {
+    width: 100%;
+    text-align: center;
+}
+
+.heartboard h4 {
+    margin-bottom: 40px;
+}
+
+.checkmyheart {
+    width: 50%;
+    padding: 10px;
+    height: 50px;
+    margin: auto;
+    margin-top: 20px;
+    background-color: #F5815A;
+    position: relative;
+    z-index: 100;
+}
+
+
+/* QT */
+
+.qtBody {
+    font-size: 50rem;
+    opacity: 0.1;
+    position: fixed;
+    left: 10%;
+    color: #95d7e3;
+}
+
+.qtCont {
+    padding: 0 25px;
+}
+
+.qtCont h3,
+.qtCont .subTitle {
+    text-align: center;
+}
+
+.qtCont p:last-child {
+    margin-bottom: 30px;
+}
+
+.sorryClosed {
+    width: 50%;
+    position: absolute;
+    margin: auto;
+    right: 0;
+    left: 0;
+}
+
+
+/* MEMORIZE */
+
+.memorizeBody {
+    font-size: 50rem;
+    opacity: 0.1;
+    position: fixed;
+    bottom: 0;
+    left: 5%;
+    color: #f5b260;
+}
+
+.memorizeCont {
+    padding: 0 25px;
+    position: relative;
+    z-index: 1;
+}
+
+#kakao-link-btn .jumbotron {
+    margin-top: 20%;
+    text-decoration: none;
+    color: #5e5e5e;
+    text-align: center;
+}
+
+
+/* Slick CSS */
+
+.slick-dots {
+    position: absolute;
+    bottom: -45px;
+    list-style: none;
+    display: block;
+    text-align: center;
+    padding: 0;
+    width: 100%;
+}
+
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.slick-dots li button {
+    border: 0;
+    background: transparent;
+    display: block;
+    height: 20px;
+    width: 20px;
+    outline: none;
+    line-height: 0;
+    font-size: 0;
+    color: transparent;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.slick-dots li button:before {
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    outline: none;
+    border-radius: 50%;
+    background-color: #999999;
+    font: 0/0 a;
+    color: #999999;
+    opacity: 1 !important;
+    content: "" !important;
+}
+
+.slick-dots li.slick-active button:before {
+    top: 0px;
+    left: 0px;
+    width: 8px;
+    height: 8px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #999999;
+    background-color: transparent;
+    cursor: default;
+    border-radius: 50%;
+    content: "" !important;
+    color: #999999;
+}
+
+
+/* MEAL */
+.mealBody {
+    text-align: center;
+}
+
+.mealBody h3 {
+    margin-top: 70%;
+}
+
+.cooking {
+    width: 50%;
+    position: absolute;
+    margin: auto;
+    right: 0;
+    left: 0;
+    margin-top: 20px;
+}
+
+.cookingbg {
+    background-image: url('../img/cookingbg.png');
+    background-repeat: no-repeat;
+    background-position: 60%;
+    opacity: 0.2;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.cookingbg2 {
+    background-image: url('../img/cookingbg2.png');
+    background-repeat: no-repeat;
+    background-position: 120%;
+    opacity: 0.2;
+    width: 100%;
+    height: 50%;
+    margin-top: 160%;
+    position: absolute;
+}
+
+/* SCHEDULE */
+.currentEvent:before {
+    box-shadow: 0 0 0 4px #f5b260;
+}
+
+.nextEvent:before {
+    box-shadow: 0 0 0 4px #95d7e3;
+}
+
+.timelineCont {
+    height: 60%;
+    position: absolute;
+    width: 90%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: auto;
+    right: 0;
+    left: 0;
+    -webkit-transition: 1s ease;
+    transition: 1s ease;
+}
+
+.schedulealarm {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Heart sent */
+.msgBody {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0) !important;
+}
+
+.msgBody .msgHeart {
+    width: 30%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 0;
+    opacity: 0.4;
+}
+
+.msgBody p {
+    z-index: 1;
+}
+
+/* Quest */
+.questBody {
+    margin-top: 50px;
+}
+
+.questBody h2 {
+    text-align: center;
+    color: #f5b260;
+}
+
+.questBody h5 {
+    line-height: 1.5;
+    text-align: center;
+}
+
+.questHeart {
+    width: 20%;
+    padding: 28px;
+    min-height: 70px;
+    text-align: center;
+}
+
+.quest {
+    width: 80%;
+    padding: 28px;
+    min-height: 70px;
+}
+
+.questColor {
+    background-color: #f5b260;
+}
+
+.questPopup {
+    width: 90%;
+    height: 40%;
+    display: none;
+    position: fixed;
+    margin: auto;
+    margin-bottom: auto;
+    padding: 5%;
+    top: 0;
+    text-align: center;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    -webkit-box-shadow: 0px 0px 28px 2px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: 0px 0px 28px 2px rgba(0, 0, 0, 0.57);
+    box-shadow: 0px 0px 28px 2px rgba(0, 0, 0, 0.57);
+}
+
+.questPopup .btn-default {
+    background-image: none;
+    margin: 0 5px;
+}
+
+.questPopup input {
+    width: 80%;
+    margin: 0 10% 10px;
+    text-align: center;
+}
+
+.noticePgBody h5 {
+    line-height: 1.5;
+}
