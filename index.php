@@ -204,7 +204,7 @@
                 </a>
             <?php } ?>
             <?php if($admin) { ?>
-                <a href="pages/announce.php">
+                <a href="admin/announce.php">
                     <div class="ripplelink jumbotron jumbotronRMCspec1 unselectable">
                         <p>광고하기</p>
                         <i class="fa fa-bullhorn"></i>

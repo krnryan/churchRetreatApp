@@ -1,7 +1,7 @@
 <?php
     error_reporting(E_ALL);
     ini_set('display_errors', 1);
-    require_once 'db/config.php';
+    require_once '../db/config.php';
     $data2 = [];
     $result2 = mysqli_query($con, "SELECT * FROM member WHERE `regnum` = " . $_COOKIE['chung2Regnum']);
     $a = 0;
@@ -25,18 +25,18 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
     </head>
 
     <body>
         <div id="orientationOverlay">
-            <img src="img/portrait_only.png" />
+            <img src="../img/portrait_only.png" />
         </div>
         <div id="desktopOverlay">
             <p>Mobile을 이용해 주세요!</p>
         </div>
         <div id="loadingOverlay">
-            <img src="img/progress.gif" />
+            <img src="../img/progress.gif" />
         </div>
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
@@ -44,7 +44,7 @@
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                         <i class="fa fa-heartbeat"></i>
                     </button>
-                    <a class="navbar-brand" href="index.php"><i class="fa fa-home"></i> 메인으로 돌아가기</a>
+                    <a class="navbar-brand" href="../index.php"><i class="fa fa-home"></i> 메인으로 돌아가기</a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <div class="jumbotron navStatus">
@@ -68,21 +68,22 @@
         <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script defer src="https://code.getmdl.io/1.1.1/material.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-        <script src="js/script.js"></script>
+        <script src="../js/config.js"></script>
+        <script src="../js/script.js"></script>
         <script>
             $(function () {
                 $('body').on('click', '.sendNotice', function () {
                     var data = {
                         'title': $('.title').val(),
-                        'content': $('.content').val()
+                        'content': $('.content').val().replace(/\n/g, '<br />')
                     }
                     $.ajax({
                         type: 'POST',
-                        url: 'ajax/sendnotice.php',
+                        url: '../ajax/sendnotice.php',
                         data: data,
                         dataType: 'json'
                     }).always(function () {
-                        location.href = 'index.php';
+                        location.href = '../index.php';
                     });
                 });
             });

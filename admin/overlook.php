@@ -1,7 +1,7 @@
 <?php
     error_reporting(E_ALL);
     ini_set('display_errors', 1);
-    require_once 'db/config.php';
+    require_once '../db/config.php';
     $data = [];
     $data2 = [];
     $result = mysqli_query($con, "SELECT * FROM member");
@@ -35,7 +35,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
         <?php
             echo '<script>var myHeartGiven = ' . $myHeartGiven . '; var myHeartTaken = ' . $myHeartTaken . '</script>';
         ?>
@@ -43,13 +43,13 @@
 
     <body>
         <div id="orientationOverlay">
-            <img src="img/portrait_only.png" />
+            <img src="../img/portrait_only.png" />
         </div>
         <div id="desktopOverlay">
             <p>Mobile을 이용해 주세요!</p>
         </div>
         <div id="loadingOverlay">
-            <img src="img/progress.gif" />
+            <img src="../img/progress.gif" />
         </div>
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
@@ -57,7 +57,7 @@
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                         <i class="fa fa-heartbeat"></i>
                     </button>
-                    <a class="navbar-brand" href="index.php"><i class="fa fa-home"></i> 메인으로 돌아가기</a>
+                    <a class="navbar-brand" href="../index.php"><i class="fa fa-home"></i> 메인으로 돌아가기</a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <div class="jumbotron navStatus">
@@ -87,7 +87,7 @@
             ?>
                 <div class="jumbotron captain ripplelink">
                     <h1><?php echo $a; ?>조 조장: <?php echo $groupLeader; ?></h1>
-                    <img src="img/captain-default.png" />
+                    <img src="../img/captain-default.png" />
                 </div>
             <?php
                 foreach($data as $member) {
@@ -136,7 +136,8 @@
         <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script defer src="https://code.getmdl.io/1.1.1/material.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-        <script src="js/script.js"></script>
+        <script src="../js/config.js"></script>
+        <script src="../js/script.js"></script>
     </body>
 
     </html>
