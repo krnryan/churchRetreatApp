@@ -6,5 +6,5 @@
     } else {
         $fail_id = '&passcode=notfound';
     }
-    header('Location:index.php' . $fail_id);
+    header('Location:../index.php' . $fail_id);
 ?>

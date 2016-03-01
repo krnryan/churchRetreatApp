@@ -1,5 +1,3 @@
-var DEBUG = true;
-
 $(function () {
     if((navigator.userAgent.match(/Macintosh/i) != null && navigator.userAgent.match(/Macintosh/i).length > 0) || (navigator.userAgent.match(/Windows/i) != null && navigator.userAgent.match(/Windows/i).length > 0)) {
         $('#desktopOverlay').show();
@@ -103,7 +101,7 @@ function orientationChange() {
         $('body').css('overflow', 'auto');
         break;
     default:
-        (DEBUG) ? $('#orientationOverlay').hide() : $('#orientationOverlay').show();
+        (Config.DEBUG) ? $('#orientationOverlay').hide() : $('#orientationOverlay').show();
         $('body').css('overflow', 'hidden');
         break;
     }

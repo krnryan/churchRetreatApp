@@ -1,5 +1,5 @@
 <?php
-    require_once 'db/config.php';
+    require_once '../db/config.php';
     $data = [];
     $result = $con->query("SELECT * FROM member WHERE `regnum` = " . $_COOKIE['chung2Regnum']);
     $i = 0;
@@ -23,24 +23,24 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0, user-scalable=no">
-        <title>청2 수양회</title>
+        <title>청3 수양회</title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
     </head>
 
     <body>
         <i class="fa fa-book qtBody"></i>
         <div id="orientationOverlay">
-            <img src="img/portrait_only.png" />
+            <img src="../img/portrait_only.png" />
         </div>
         <div id="desktopOverlay">
             <p>Mobile을 이용해 주세요!</p>
         </div>
         <div id="loadingOverlay">
-            <img src="img/progress.gif" />
+            <img src="../img/progress.gif" />
         </div>
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
@@ -48,7 +48,7 @@
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                         <i class="fa fa-heartbeat"></i>
                     </button>
-                    <a class="navbar-brand" href="index.php"><i class="fa fa-home"></i> 메인으로 돌아가기</a>
+                    <a class="navbar-brand" href="../index.php"><i class="fa fa-home"></i> 메인으로 돌아가기</a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <div class="jumbotron navStatus">
@@ -63,9 +63,9 @@
         <div class="container topMargin qtCont">
             <?php if($today < 1455955200) { ?>
             <h3>매일성경 QT</h3>
-            <p class="subTitle">큐티가 너무 하고 싶었구나?!</p>
+            <p class="subTitle">큐티가 너무 하고 싶었군요?!</p>
             <p class="subTitle">하지만, 큐티는 내일 아침부터!</p>
-            <img class="sorryClosed" src="img/closed.png" />
+            <img class="sorryClosed" src="../img/closed.png" />
             <?php } elseif($today < 1456041600) { ?>
             <h3>매일성경 QT (<?php echo date('m월 d일 토', 1455955200); ?>)</h3>
             <p class="subTitle">좁은 문이 곧 닫힙니다 [ 누가복음 13:22 - 13:35 ]</p><br>
@@ -90,7 +90,8 @@
         <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script defer src="https://code.getmdl.io/1.1.1/material.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-        <script src="js/script.js"></script>
+        <script src="../js/config.js"></script>
+        <script src="../js/script.js"></script>
     </body>
 
     </html>
