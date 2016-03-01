@@ -210,7 +210,7 @@
                         <i class="fa fa-bullhorn"></i>
                     </div>
                 </a>
-                <a href="pages/overlook.php">
+                <a href="admin/overlook.php">
                     <div class="ripplelink jumbotron jumbotronRMCspec2 unselectable">
                         <p>전체보기</p>
                         <i class="fa fa-cloud"></i>
